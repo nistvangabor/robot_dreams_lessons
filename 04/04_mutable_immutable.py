@@ -17,3 +17,16 @@ new_tuple = my_tuple + (4,)  # Create a new tuple
 print("New tuple ID:", id(new_tuple))  # ID is different
 print("Original tuple:", my_tuple)
 print("New tuple:", new_tuple)
+
+### strings are also immutable
+
+name = "Sarah"
+#name[0] = "T"
+print(name)
+name = f"T{name[1:]}"
+print(name)
+
+#mutable:
+#lists, dictionaries, sets, (bytearrays)
+
+#immutable: int, bool, float, string, tuple, frozenset, nonetype

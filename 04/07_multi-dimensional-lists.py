@@ -1,6 +1,8 @@
-import pprint
-two_dim_list = [[1,2,3],
-                [1,2,3],
-                [1,2,3]]
+matrix = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
 
-pprint.pprint(two_dim_list)
+print(matrix[1])
+print(matrix[1][1])

@@ -1,11 +1,11 @@
 # LIST
 
-my_list = ["a", "a", "b", "c"] # we can store duplicates
+letters = ["a", "a", "b", "c"] # we can store duplicates
 mixed_type_list = ["a", 123, 123.5, None, False] # we can store multiple data types 
-my_list2 = list() #list konstruktor
-my_list2 = [] 
-my_list2 = list(range(5))
-print(my_list2)
+letters2 = list() #list konstruktor
+letters2 = [] 
+numbers = list(range(5))
+print(numbers)
 
 #indexing
 
@@ -25,6 +25,7 @@ print(names)
 names[1:2] = ["Timmy", "Kyle"]
 print(names)
 
+#inserting less
 names[1:3] = ["Jeremy"]
 print(names)
 
