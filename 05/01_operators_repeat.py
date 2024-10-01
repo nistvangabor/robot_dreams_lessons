@@ -1,3 +1,4 @@
+#CHECK PRESENTATION FOR ALL POSSIBLE OPERATORS!!
 #arithmetic operators
 a = 1 + 2 # - * / % ** stb.
 
@@ -52,9 +53,12 @@ y = [1, 2, 3]
 print(x == y)   # True, mert az `x` és `y` listák azonos elemeket tartalmaznak.
 print(x is y)   # False, mert az `x` és `y` különböző listák a memóriában.
 
+#membership operators
 
-#x.__eq__() #erről később tanulunk hogy objektumok, amiknek metódusai és attribútumai vannak, mi alapján hasonlítódnak össze amikor az == operátort használjuk.
-print(10-3*2+5)
+print(1 in x)
+print(1 not in x)
+
+print(10-3*2+5) # 9
 print(10/2*5)
 
 print(True or False and False) # az 'and' hamarabb hajtódik végre mint az or ezért True lesz az eredmény
@@ -63,7 +67,4 @@ print((True or False) and False)
 # short circuit evaluation: a 60. soron lévő példában a python a True után már nem is olvassa tovább, mert a True or miatt már fixen True lesz a vége
 
 
-#membership operators
-
-print(1 in x)
-print(1 not in x)
+print(True and False and False and False)

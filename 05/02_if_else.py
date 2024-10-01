@@ -57,7 +57,7 @@ if "raspberry" in fruits:
 
 
 if "raspberry" in fruits or "banana" in fruits:
-    print("either of the 2 is present in the list")
+    print("at least one of the 2 is present in the list")
 
 
 if "raspberry" in fruits and "banana" not in fruits:

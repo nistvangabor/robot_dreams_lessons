@@ -4,7 +4,7 @@ correct_pin = 1234
 
 pin = input("Please enter your PIN: ")
 
-if pin == "1234":
+if pin == correct_pin:
     print("PIN accepted.")
     print(f"Your current balance is: ${account_balance:.2f}")
 

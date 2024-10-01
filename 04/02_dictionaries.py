@@ -36,7 +36,6 @@ print(student)
 student["grades"].append(3)
 print(student)
 
-
 latest_grade = int(input("Grade: "))
 
 us_grade_mapping = {

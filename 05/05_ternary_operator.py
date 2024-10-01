@@ -13,3 +13,7 @@ print(result)
 
 #megmutatni, hogy a 02_if_else végén létrehozott megvadulós példa nem jó ternary-hoz
 
+age = 65
+
+category = "Minor" if age < 18 else "Adult" if age < 65 else "Senior"
+print(category)  #ezt már nem raknám bele egy ternary-ba
