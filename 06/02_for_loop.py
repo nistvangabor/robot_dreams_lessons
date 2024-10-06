@@ -37,5 +37,5 @@ for k in student.values():
     print(k)
 
 #looping over a range:
-for count in range(5):
-    print(count)
+for id in range(5):
+    print(id)

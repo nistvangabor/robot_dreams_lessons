@@ -2,17 +2,17 @@ numbers = [1, 2, 3, 4, 5]
 
 print("--------------------")
 #without list comprehensions:
-squares = []
+squared_numbers = []
 for num in numbers:
-    squares.append(num ** 2)
-print(squares) 
+    squared_numbers.append(num ** 2)
+print(squared_numbers) 
 
 #with list comprehensions:
-squares = [num ** 2 for num in numbers]
-print(squares)
+squared_numbers = [num ** 2 for num in numbers]
+print(squared_numbers)
 
 print("--------------------")
-#list comprehensions with if-else:
+#list comprehensions with if
 
 numbers = [1, 2, 3, 4, 5]
 even_squares = []
@@ -31,7 +31,8 @@ new_list = ["even" if num % 2 == 0 else "odd" for num in numbers]
 print(new_list)
 
 print("--------------------")
-#measuring performance
+#measuring performance, append allocates memory on each call to extend the place for growth, while list comprehension 
+#calculates it once
 import time
 
 numbers = range(1, 1000000)

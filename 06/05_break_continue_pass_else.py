@@ -14,6 +14,18 @@ for number in random_numbers:
 else:
     print("No number in the list is divisible by 7.")
 
+#real life example for BREAK:
+attempts = 0
+while attempts < 3:
+    password = input("Enter your password: ")
+    if password == "secret":
+        print("Access granted!")
+        break
+    else:
+        print("Wrong password, try again")
+    attempts += 1
+else:
+    print("Reached max tries. Check your email.")
 
 #CONTINUE:
 
