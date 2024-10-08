@@ -34,3 +34,12 @@ print(age_in_days)
 age_in_days = calculate_age_in_days(25)  # Valid case, continues to the rest of the function
 print(age_in_days)
 
+
+#returning multiple values
+def multiply_two_values(a, b):
+    return a*2, b*2 #returns a tuple
+
+print(type(multiply_two_values(1,2)))
+
+#tuple unpacking
+x,y = multiply_two_values(1,2)
