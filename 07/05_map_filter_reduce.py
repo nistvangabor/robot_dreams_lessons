@@ -10,6 +10,10 @@ squared_numbers = list(map(square, numbers))#megmutatni hogy ezt listává is tu
 #print(next(squared_numbers))
 #print(next(squared_numbers))
 print(squared_numbers)
+#extra: list comprehension-ben való function hívás
+squared_numbers = [square(num) for num in numbers]
+print(squared_numbers)
+
 
 #FILTER: 
 

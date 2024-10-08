@@ -45,10 +45,14 @@ describe_pet(animal_type="dog", pet_name="Rusty")
 
 
 #positional only and keyword only
-def test_function(a, b, /, *, c, d):
-  return a + b + c + d
+def power(base, exponent, /, *, precision=None):
+    result = base ** exponent
+    if precision:
+        return round(result, precision)
+    return result
 
-test_function(5, 6, c = 7, d = 8)
+print(power(2.3, 3))  # Positional arguments for base and exponent: 8
+print(power(2.2, 3, precision=2))  # Keyword argument for precision: 8.0
 #test_function(5, b=6, c=8, d = 8) #error
 
 print("--------------------------------------------")
