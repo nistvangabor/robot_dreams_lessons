@@ -1,0 +1,7 @@
+2024-10-11 20:20:15,928 - INFO - Program started successfully.
+2024-10-11 20:20:15,928 - WARNING - This might be a problem in the future.
+2024-10-11 20:20:15,928 - ERROR - An error occurred in this function.
+2024-10-11 20:20:15,928 - CRITICAL - The program crashed.
+2024-10-11 20:20:15,929 - INFO - This will go to both the file and the console.
+2024-10-13 21:41:58,490 - root - INFO - Welcome to the Number Guessing Game!
+2024-10-13 21:42:02,200 - root - INFO - Attempt 1 of 5

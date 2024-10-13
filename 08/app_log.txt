@@ -1,0 +1,25 @@
+2024-10-11 20:22:54,264 - INFO - Welcome to the Number Guessing Game!
+2024-10-11 20:22:59,612 - INFO - Attempt 1 of 5
+2024-10-11 20:22:59,612 - INFO - 
+Attempt 1 of 5
+2024-10-11 20:23:04,134 - INFO - Too low!
+2024-10-11 20:23:04,135 - INFO - Player guessed too low
+2024-10-11 20:23:04,135 - INFO - Attempt 2 of 5
+2024-10-11 20:23:04,135 - INFO - 
+Attempt 2 of 5
+2024-10-11 20:23:47,212 - INFO - Welcome to the Number Guessing Game!
+2024-10-11 20:23:49,377 - INFO - Attempt 1 of 5
+2024-10-11 20:23:56,101 - INFO - Too high!
+2024-10-11 20:23:56,102 - INFO - Player guessed too high
+2024-10-11 20:23:56,102 - INFO - Attempt 2 of 5
+2024-10-11 20:24:34,763 - INFO - Welcome to the Number Guessing Game!
+2024-10-11 20:24:37,010 - INFO - Attempt 1 of 5
+2024-10-11 20:24:39,135 - INFO - Too high!
+2024-10-11 20:24:39,135 - INFO - Attempt 2 of 5
+2024-10-11 20:25:00,415 - INFO - Too low!
+2024-10-11 20:25:00,415 - INFO - Attempt 3 of 5
+2024-10-11 20:25:04,048 - INFO - Too high!
+2024-10-11 20:25:04,049 - INFO - Attempt 4 of 5
+2024-10-11 20:25:11,742 - INFO - Too high!
+2024-10-11 20:25:11,743 - INFO - Attempt 5 of 5
+2024-10-11 20:25:21,666 - INFO - Congratulations! You've guessed the right number: 28

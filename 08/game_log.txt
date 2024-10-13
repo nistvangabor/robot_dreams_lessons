@@ -1,0 +1,40 @@
+2024-10-11 19:45:31,404 - INFO - Attempt 1 of 3
+2024-10-11 19:45:45,794 - ERROR - Invalid input for guess: invalid literal for int() with base 10: 'asd'
+2024-10-11 19:49:15,221 - INFO - Welcome to the Number Guessing Game!
+2024-10-11 19:49:22,908 - INFO - Invalid input: invalid literal for int() with base 10: '\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18'. Please enter a positive integer.
+2024-10-11 19:49:22,908 - ERROR - Invalid input for max_attempts: invalid literal for int() with base 10: '\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18'
+2024-10-11 19:49:25,163 - INFO - Invalid input: invalid literal for int() with base 10: 'clear'. Please enter a positive integer.
+2024-10-11 19:49:25,163 - ERROR - Invalid input for max_attempts: invalid literal for int() with base 10: 'clear'
+2024-10-11 19:49:26,437 - INFO - Attempt 1 of 5
+2024-10-11 19:49:26,437 - INFO - 
+Attempt 1 of 5
+2024-10-11 19:49:35,389 - INFO - Welcome to the Number Guessing Game!
+2024-10-11 19:49:39,234 - INFO - Attempt 1 of 5
+2024-10-11 19:49:39,234 - INFO - 
+Attempt 1 of 5
+2024-10-11 19:49:40,676 - INFO - Too high!
+2024-10-11 19:49:40,676 - INFO - Player guessed too high
+2024-10-11 19:49:40,676 - INFO - Attempt 2 of 5
+2024-10-11 19:49:40,676 - INFO - 
+Attempt 2 of 5
+2024-10-11 19:49:45,964 - INFO - Too high!
+2024-10-11 19:49:45,964 - INFO - Player guessed too high
+2024-10-11 19:49:45,964 - INFO - Attempt 3 of 5
+2024-10-11 19:49:45,964 - INFO - 
+Attempt 3 of 5
+2024-10-11 19:49:46,713 - INFO - Too high!
+2024-10-11 19:49:46,714 - INFO - Player guessed too high
+2024-10-11 19:49:46,714 - INFO - Attempt 4 of 5
+2024-10-11 19:49:46,714 - INFO - 
+Attempt 4 of 5
+2024-10-11 19:49:47,210 - INFO - Too high!
+2024-10-11 19:49:47,211 - INFO - Player guessed too high
+2024-10-11 19:49:47,211 - INFO - Attempt 5 of 5
+2024-10-11 19:49:47,211 - INFO - 
+Attempt 5 of 5
+2024-10-11 19:49:47,589 - INFO - Too high!
+2024-10-11 19:49:47,589 - INFO - Player guessed too high
+2024-10-11 19:49:47,589 - INFO - Sorry, you did not guess the number. It was: 44
+2024-10-11 19:49:47,589 - INFO - Player failed to guess the number: 44
+2024-10-11 19:49:48,628 - INFO - Game over! Thanks for playing!
+2024-10-11 19:49:48,628 - INFO - Player exited the game
