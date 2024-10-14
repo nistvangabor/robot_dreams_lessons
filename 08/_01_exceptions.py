@@ -1,77 +1,73 @@
 def divide_numbers(a, b):
-    return a / b 
+    return a / b
 
+#zero division error
+num = divide_numbers(a=10, b=1)
+print(num)
 
-#num = divide_numbers(10,0) #először megpróbálni rendes pozitív számmal
-#print(num)
-
+#value rror
 #age = float(input("How old are you? Please provide a number!"))
+#print(age)
 
-my_list = [1,2,3,4]
-#print(my_list[6])
-
-
-a = 10
-b = 0
-#c = a / b
+#index error
+#my_list = [1,2,3,4,5]
+#print(my_list[5])
 
 #HANDLING EXCEPTIONS:
 
 try:
-    a = float(input("Add meg az első számot!"))
-    b = float(input("Add meg a második számot!"))
+    a = float(input("First number: "))
+    b = float(input("Second number: "))
     c = a / b
 except ZeroDivisionError as e:
-    print(f"Error: B is a 0. {e}")
+    print(f"Zero div. error: {e}")
 except ValueError as e:
-    print(f"Error: can not convert to float. {e}")
+    print(f"Value error: {e}")
 except Exception as e:
-    print(f"Something unexpected happened. {e}")
+    print(f"Something unexpected happened: {e}")
 else:
     print(c)
-finally: 
+finally:
     print("Division attempt finished.")
 
 
-#RAISING EXCEPTIONS
+print("Random stuff")
+
+# RAISING EXCEPTIONS:
 
 def calculate_rectangle_area(a, b):
     return a * b
 
-area = calculate_rectangle_area(10, 5)
-print(area)
 
-#area = calculate_rectangle_area("ten", "five")
-area = calculate_rectangle_area(-1, 5)
-print(area)
+area = calculate_rectangle_area(10, 5)
+area_error = calculate_rectangle_area(10, -1)
+print(area_error)
+#area_error_2 = calculate_rectangle_area("ten", "two")
+#print(area_error_2)
+
 
 #SOLVE ISSUES:
 
 def calculate_rectangle_area(length, width):
-    # Check if the inputs are valid numbers
-    if not isinstance(length, (int, float)):
-        raise TypeError("Length must be a number.")
-    if not isinstance(width, (int, float)):
-        raise TypeError("Width must be a number.")
 
-    # Check if the dimensions are positive
-    if length <= 0:
-        raise ValueError("Length must be a positive number.")
-    if width <= 0:
-        raise ValueError("Width must be a positive number.")
+    if not isinstance(length, (int, float)) or not isinstance(width, (int,float)):
+        raise TypeError("Both params must be a number!")
 
-    # Calculate and return the area
+    if length >= 0 or width >= 0:
+        raise ValueError("Both params must be a positive number!")
+
     return length * width
 
-# Example usage
+
+#example usage:
+
 try:
-    area = calculate_rectangle_area(5, 2)  # This will raise a ValueError
+    area = calculate_rectangle_area(5,"two")
     print(f"Area of the rectangle: {area}")
-except ValueError as ve:
-    print(f"ValueError: {ve}")
-except TypeError as te:
-    print(f"TypeError: {te}")
+except ValueError as e:
+    print(f"Value error: {e}")
+except TypeError as e:
+    print(f"Type error: {e}")
 
 
-
-#CUSTOM EXCEPTION-ÖKet is lehet írni, de ehhez ismerni kell a class-okat.
+#custom exception-ök: OOP tudás szükséges.
