@@ -1,14 +1,18 @@
-#SEPARATION OF CONCERNS
+#real life example: egy gépezet ami játékokat (pl matchbox, barbie baba stb.) gyárt
+#van egy kezelőfelülete, amin be tudjuk állítani a következőket:
+# - játék típusa
+# - játék színe
+#ezután a gép legyártja nekünk a játékot
 
-#real world example:
-#class: egy leírás, ami alapján egy gép meg tudja csinálni a kívánt játékot
-#__init__: a gép kezelőfelülete, ahol meg tudjuk adni hogy milyen típusú (pl: kisautó, baba stb.) és milyen színű játékot szeretnénk 
-#instance: az osztály egy példánya, pl a gép által létrehozott játék
-#instance variable: olyan tulajdonság, ami az adott példányt jellemzi: pl egy darab játék színe
-#class variable: olyan tulajdonság, ami a teljes osztályra jellemző, pl: egy számláló arról, hány játékot gyártott már le a gépünk
-#instance method: olyan metódus ami a példányokat használja/módosítja pl egy move() method ami mozgatja a játékot
-#class method: olyan metódus ami az osztály attribútumait használja/módosítja
-#static method: nincs hozzáférése sem a példányhoz, se az osztályhoz, de logikailag ide tartozik. megoszlanak a vélemények, hogy ez simán lehetne csak egy különálló function is minden esetben
+
+#class: maga a gépezet, ami tudja hogyan kell a játékot megcsinálni a megadott paraméterek (típus, szín) alapján. Van egy blueprint (leírás) hozzá.
+#__init__(): a gép kezelőfelülete, amivel interaktálunk amikor létre akarjuk hozni a játékot, itt egy gombnyomás hozza létre a játékot.
+#instance: az osztály egy példánya, vagyis a gép által létrehozott 1 darab játék
+#instance variable: olyan tulajdonság, ami egy gép által létrehozott játékra jellemző: pl játék színe
+#class variable: olyan tulajdonság, ami a teljes osztályra (gépre) jellemző, pl: hány játékot gyártott már le
+#instance method: olyan metódus, ami a példányokat (játékok) használja/módosítja: pl egy move() metódus ami által a játék mozog
+#class method: olyan metódus ami az osztály attribútumait használja/változtatja pl: egy get_toy_count() method ami visszaadja az eddig legyártott játékok számát
+#static method: nincs hozzáférése sem példányhoz, sem osztályhoz, de logikailag ide tartozik, pl: adott játék javasolt e n éves korban (is_toy_safe_for_age(toy_type, age) method) 
 
 class Toy:
 
@@ -18,35 +22,51 @@ class Toy:
         self.toy_type = toy_type
         self.toy_color = toy_color
         Toy.toy_count += 1
-
+    
     def play(self):
         print(f"Currently playing with the {self.toy_color} {self.toy_type}")
 
-    @classmethod
+    def move(self, distance, direction):
+        print(f"{self.toy_type} moved {distance} meters to the {direction}")
+
+    @classmethod #dekorátor: megváltoztatja az alatta definiált function működését
     def get_toy_count(cls):
-        """Returns the total number of toys created."""
         return cls.toy_count
 
     @staticmethod
     def is_toy_safe_for_age(toy_type, age):
-        """Checks if a toy is safe for a certain age group."""
-        if toy_type == "small parts" and age < 3:
+
+        if toy_type == "lego" and age < 3:
             return False
         return True
 
 
 
-toy_1 = Toy("matchbox", "yellow")
-print(toy_1)
-print(toy_1.toy_color)
-print(toy_1.toy_type)
-toy_1.play()
 
-#ismerős?
+matchbox = Toy(toy_type="matchbox", toy_color="yellow")
+print(matchbox)
+print(matchbox.toy_color)
+print(matchbox.toy_type)
+matchbox.play()
 
-#name = "Steve"
-#print(name.capitalize())
+barbie = Toy(toy_type="barbie", toy_color="pink")
+
+barbie.toy_color = "green"
+print(barbie.toy_color)
+barbie.toy_color = "red"
+print(barbie.toy_color)
+barbie.play()
+
+matchbox.move(3, "left")
+print(Toy.toy_count)
+print(Toy.get_toy_count())
+
+print(Toy.is_toy_safe_for_age("matchbox", 10))
 
 
-toy_1.toy_color = "green"
-toy_1.play()
+####
+
+name = "steve"
+print(name.capitalize())
+print(str.capitalize("almafa"))
+#EVERYTHING IS AN OBJECT IN PYTHON
