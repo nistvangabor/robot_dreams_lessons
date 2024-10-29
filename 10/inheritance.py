@@ -37,6 +37,14 @@ class Employee(Person):
     def introduce_person(self): # METHOD OVERRIDING
         print(f"Hello, my name is {self.first_name} {self.last_name}. I am a {self.job_type}")
 
+    def __str__(self):
+        return f"{self.first_name} - {self.last_name}"
+    
+    def __eq__(self, other_obj:object):
+        if isinstance(other_obj, Employee):
+            return self.first_name == other_obj.first_name and self.last_name == other_obj.last_name
+        return False   
+
 p = Person(first_name="John", last_name="Smith")
 print(p)
 p.introduce_person()
