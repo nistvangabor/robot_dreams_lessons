@@ -16,3 +16,11 @@ class WeatherApp:
 w_s = WeatherService()
 w_a = WeatherApp(service=w_s)
 
+""" .coveragerc a root-ba
+[run]
+omit =
+    */test_*
+"""
+
+#pytest --cov=12 --cov-fail-under=65 --cov-report=term-missing
+ 
