@@ -10,7 +10,7 @@ print(df.tail())
 
 #basic statistical data:
 print(df.describe())
-
+#percentilisek: az értékek 25%-a ennyi, vagy kevesebb ebben az oszlopban
 #selecting columns:
 
 product_price_df = df[["Product line", "Unit price"]]
@@ -93,11 +93,5 @@ def categorize_stock(row):
         return 'Standard'
     
 merged_stock_df['category'] = merged_stock_df.apply(categorize_stock, axis=1)
-
-
-#filtering:
-
-filtered_stock_df = merged_stock_df[merged_stock_df['price'] > 300]
-print("\nSzűrt DataFrame (ár > 100):\n", filtered_stock_df)
 
 

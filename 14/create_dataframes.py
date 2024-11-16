@@ -46,7 +46,7 @@ print(df)
 
 #create dataframe from a csv file:
 
-df = pd.read_csv("14/supermarket_sales.csv")
+df = pd.read_csv("14/supermarket_sales.csv") #DTYPE-OT ELMONDANI
 print(df)
 
 #create dataframe from a json:
