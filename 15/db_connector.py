@@ -60,10 +60,14 @@ class SQLiteDB:
         print(query)
         """
             INSERT INTO department (department_id, department_name) VALUES (?, ?)
-            ON CONFLICT(department_id) DO UPDATE SET department_id = excluded.department_id, department_name = excluded.department_name
+            ON CONFLICT(department_id) DO UPDATE SET department_name = excluded.department_name
         """
         with self.conn:
             self.conn.execute(query, tuple(record.values()))
+
+    def write_dataframe_to_table(self, df: pd.DataFrame, table: str, if_exists: str = 'append', index: bool = False):
+
+        df.to_sql(name=table, con=self.conn, if_exists=if_exists, index=index)
 
 
 with SQLiteDB('15/sqlite-db') as db: # Manages the database connection itself â€” ensuring it opens and closes correctly.
@@ -79,11 +83,17 @@ with SQLiteDB('15/sqlite-db') as db: # Manages the database connection itself â€
     ]
     #db.write_multiple_records('department', departments)
 
-    db.update_record('department', {'department_name': 'UpdatedDepartmentName'}, {'department_id': 9})
+    #db.update_record('department', {'department_name': 'UpdatedDepartmentName'}, {'department_id': 9})
 
-    db.delete_records('department', "department_id = ?", [8])
+    #db.delete_records('department', "department_id = ?", [8])
     #where_clause = "employee_id = ? AND status = ?"
     #params = [5, 'inactive']
     
-    db.upsert_record('department', {'department_id': 9, 'department_name': 'UpsertedDepartment'}, ['department_id'])
-    db.upsert_record('department', {'department_id': 10, 'department_name': 'UpsertedDepartment2'}, ['department_id'])
+    db.upsert_record('department', {'department_id': 9, 'department_name': 'UpsertedDepartment3'}, ['department_id'])
+    db.upsert_record('department', {'department_id': 10, 'department_name': 'UpsertedDepartment4'}, ['department_id'])
+
+    df = pd.DataFrame({"department_id": ["anataloy"], "department_name": ["anatly department"]})
+
+    #db.write_dataframe_to_table(df, "department")
+
+    print(db.select_records("SELECT * FROM department"))
