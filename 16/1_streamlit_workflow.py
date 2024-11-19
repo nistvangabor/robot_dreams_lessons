@@ -1,4 +1,4 @@
-#pip install streamlit matplotlib
+#pip install streamlit plotly
 #pip freeze > requirements.txt
 #streamlit run lessons/16/main.py
 

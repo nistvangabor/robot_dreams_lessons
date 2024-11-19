@@ -17,3 +17,14 @@ print(editable_df.loc[0, "Branch"])
 
 st.header("Metrics")
 st.metric(label="Total sales:", value=f"${supermarket_df['Total'].sum():,.2f}")
+
+uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+
+# Check if a file has been uploaded
+if uploaded_file is not None:
+    # Read the uploaded file as a Pandas DataFrame
+    df = pd.read_csv(uploaded_file)
+    
+    # Display the DataFrame
+    st.markdown("### Data Preview")
+    st.dataframe(df)
