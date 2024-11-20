@@ -8,7 +8,6 @@ st.dataframe(supermarket_df)
 
 st.title("Dataframe with write permissions")
 editable_df = st.data_editor(supermarket_df)
-print(editable_df.loc[0, "Branch"])
 
 #st.title("Static table - no filters, no search, no download")
 #static_table = st.table(supermarket_df)
