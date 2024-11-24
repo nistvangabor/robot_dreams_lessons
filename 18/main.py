@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 if __name__ == "__main__":
-    email_sender = EmailSender(sender="nigrushid@gmail.com")
+    email_sender = EmailSender(sender="nigrushid@gmail.com", passcode=os.environ.get("GMAIL_PW"))
     
     email_sender.send_email(
         to=["nigrushid@gmail.com"],
